@@ -4,10 +4,12 @@ const year = document.getElementById("year");
 
 const save = document.getElementById("save");
 const table = document.getElementById("table");
+const line = document.getElementById("line")
 
 const carData = [];
-let key = 0
+
 table.style.visibility = "hidden"
+line.style.visibility = "visible"
 
 //-----------------------------------------------------
 
@@ -23,13 +25,13 @@ class Car {
 
 //-----------------------------------------------------
 
+
 save.onclick = () => {
 
     if (!(brand.value == "")) {
 
         const newObj = new Car(brand.value, model.value, year.value)
         carData.push(newObj)
-        // console.log(carData)
 
         let row = document.createElement("tr");
 
@@ -40,14 +42,14 @@ save.onclick = () => {
         row.insertAdjacentElement("afterend", row);
         table.appendChild(row);
 
+        if (carData.length > 0) {
+            table.style.visibility = "visible"
+            line.style.visibility = "hidden"
+        }
+
         brand.value = ""
         model.value = ""
         year.value = ""
-
-        if (carData.length > 0) {
-            table.style.visibility = "visible"
-        }
-
     }
 }
 
