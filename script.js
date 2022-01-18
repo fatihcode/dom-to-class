@@ -50,6 +50,8 @@ save.onclick = () => {
         brand.value = ""
         model.value = ""
         year.value = ""
+
+        brand.focus()
     }
 }
 
