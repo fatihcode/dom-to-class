@@ -12,13 +12,14 @@ body {
 
 main {
     /* text-align: end; */
-    width: 600px;
+    width: 750px;
 }
 
 h1,
 h2 {
     align-items: center;
     text-align: center;
+    color: chocolate;
 }
 
 #year {
@@ -48,8 +49,8 @@ input {
     border-radius: 5px;
     border: 1px solid rgb(202, 202, 202);
     font-size: 18px;
-    width: 100px;
-    margin: 10px 0px;
+    width: 150px;
+    margin: 10px 10px;
 }
 
 section {
@@ -87,4 +88,9 @@ tr:hover {
 
 label {
     font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  display: none;
 }

@@ -6,7 +6,7 @@ const save = document.getElementById("save");
 const table = document.getElementById("table");
 
 const carData = [];
-
+let key = 0
 table.style.visibility = "hidden"
 
 //-----------------------------------------------------
@@ -23,15 +23,13 @@ class Car {
 
 //-----------------------------------------------------
 
-
-
 save.onclick = () => {
 
     if (!(brand.value == "")) {
 
         const newObj = new Car(brand.value, model.value, year.value)
         carData.push(newObj)
-        console.log(carData)
+        // console.log(carData)
 
         let row = document.createElement("tr");
 
@@ -49,9 +47,9 @@ save.onclick = () => {
         if (carData.length > 0) {
             table.style.visibility = "visible"
         }
+
     }
 }
-
 
 
 //-----------------------------------------------------
